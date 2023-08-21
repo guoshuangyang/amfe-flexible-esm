@@ -1,0 +1,17 @@
+{
+  "name": "amfe-flexible-esm",
+  "version": "1.0.0",
+  "module": "index.js",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    }
+  },
+  "keywords": [
+    "amfe-flexible",
+    "esm"
+  ],
+  "author": "gsy",
+  "license": "MIT"
+}
