@@ -1,11 +1,12 @@
 {
   "name": "amfe-flexible-esm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "browser": "./dist/index.iife.js",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
