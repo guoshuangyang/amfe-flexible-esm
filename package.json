@@ -1,17 +1,30 @@
 {
   "name": "amfe-flexible-esm",
-  "version": "1.0.0",
-  "module": "index.js",
-  "main": "index.js",
+  "version": "1.0.1",
+  "browser": "./dist/index.iife.js",
   "exports": {
     ".": {
-      "import": "./index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.js"
     }
+  },
+  "scripts": {
+    "build:esm": "tsup src/index.ts --format esm,cjs --minify --dts --clean --legacy-output --sourcemap",
+    "build:iife": "tsup src/index.iife.ts --format iife --minify --dts --legacy-output --sourcemap",
+    "build": "npm run build:esm && npm run build:iife"
   },
   "keywords": [
     "amfe-flexible",
     "esm"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "gsy",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
 }
